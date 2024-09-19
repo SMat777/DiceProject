@@ -8,8 +8,6 @@ import java.util.Scanner;
 
 public class Craps {
 
-    public static int SumOfDice = 0;
-
 
     public static void main(String[] args) {
 
@@ -29,6 +27,7 @@ public class Craps {
         Scanner scanner = new Scanner(System.in);
 
         int[] dice = new int[2];
+        int SumOfDice;
 
         dice[0] = (int) (Math.random() * 6 + 1);
         dice[1] = (int) (Math.random() * 6 + 1);
@@ -36,7 +35,7 @@ public class Craps {
         SumOfDice = dice[0] + dice[1];
 
         if (SumOfDice == 7 || SumOfDice == 11) {
-            System.out.println("Du slog " + SumOfDice +  " og vandt!");
+            System.out.println("Du slog " + SumOfDice +  " og vinder!!");
         } else if (SumOfDice == 2 || SumOfDice == 3 || SumOfDice == 12) {
             System.out.println("Øv!" + " Du har desværre slået " + SumOfDice +  " og taber spillet!");
         } else {
