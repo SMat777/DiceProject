@@ -29,7 +29,7 @@ public class Pigs {
             player2Score = player2Turn(input, dice, player2Score);
             if (player2Score >= 30) {
                 System.out.println("");
-                System.out.println("Player 2 wins! --> "  + player2Score + "Points");
+                System.out.println("Player 2 wins! --> " + player2Score + "Points");
                 playGame = false;
                 break;
             }
@@ -61,6 +61,10 @@ public class Pigs {
                 System.out.println("Player 1, you rolled : " + dice[0]);
                 roundScoreP1 += dice[0];
                 System.out.println("");
+                System.out.println("Your total is: " + roundScoreP1);
+
+            }
+            if (player1Score > 0) {
                 System.out.println("Your total is: " + roundScoreP1 + player1Score);
             }
             // Ask player if they want to continue
@@ -72,8 +76,7 @@ public class Pigs {
                 roundScoreP1 = 0;
                 player1Turn = false;
             }
-        }
-        return player1Score;
+        } return player1Score;
     }
 
     private static int player2Turn(Scanner input, int[] dice, int player2Score) {
@@ -95,6 +98,9 @@ public class Pigs {
                 roundScoreP2 += dice[1];
                 System.out.println("Player 2, you rolled : " + dice[1]);
                 System.out.println("");
+                System.out.println("Your total is: " + roundScoreP2);
+            }
+            if (player2Score > 0) {
                 System.out.println("Your total is: " + roundScoreP2 + player2Score);
             }
             // Ask player if they want to continue
@@ -105,6 +111,7 @@ public class Pigs {
                 player2Score += roundScoreP2;
                 roundScoreP2 = 0;
                 player2Turn = false;
+
             }
         } return player2Score;
     }
