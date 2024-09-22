@@ -20,7 +20,7 @@ public class Pigs {
             player1Score = player1Turn(input, dice, player1Score);
             if (player1Score >= 30) {
                 System.out.println("");
-                System.out.println("Player 1 wins! --> " + player1Score + "Points");
+                System.out.println("Player 1 wins! --> " + player1Score + " Points");
                 playGame = false;
                 break;
             }
@@ -29,7 +29,7 @@ public class Pigs {
             player2Score = player2Turn(input, dice, player2Score);
             if (player2Score >= 30) {
                 System.out.println("");
-                System.out.println("Player 2 wins! --> " + player2Score + "Points");
+                System.out.println("Player 2 wins! --> " + player2Score + " Points");
                 playGame = false;
                 break;
             }
@@ -37,7 +37,7 @@ public class Pigs {
 
         // Print final scores
         System.out.println("Final scores:");
-        System.out.println("");
+        System.out.println("------------");
         System.out.println("Player 1: " + player1Score);
         System.out.println("Player 2: " + player2Score);
     }
@@ -54,18 +54,13 @@ public class Pigs {
             if (dice[0] == 1) {
                 System.out.println("Player 1, you rolled : " + dice[0]);
                 System.out.println("You lose your points this turn, next player please!");
-                player1Score = 0;
                 roundScoreP1 = 0;
                 player1Turn = false;
             } else {
                 System.out.println("Player 1, you rolled : " + dice[0]);
                 roundScoreP1 += dice[0];
                 System.out.println("");
-                System.out.println("Your total is: " + roundScoreP1);
-
-            }
-            if (player1Score > 0) {
-                System.out.println("Your total is: " + roundScoreP1 + player1Score);
+                System.out.println("Your total this round is: " + roundScoreP1);
             }
             // Ask player if they want to continue
             System.out.print("Continue? (yes/no): ");
@@ -91,17 +86,13 @@ public class Pigs {
             if (dice[1] == 1) {
                 System.out.println("Player 2, you rolled : " + dice[1]);
                 System.out.println("You lose your points this turn, next player please!");
-                player2Score = 0;
                 roundScoreP2 = 0;
                 player2Turn = false;
             } else {
                 roundScoreP2 += dice[1];
                 System.out.println("Player 2, you rolled : " + dice[1]);
                 System.out.println("");
-                System.out.println("Your total is: " + roundScoreP2);
-            }
-            if (player2Score > 0) {
-                System.out.println("Your total is: " + roundScoreP2 + player2Score);
+                System.out.println("Your total this round is: " + roundScoreP2);
             }
             // Ask player if they want to continue
             System.out.print("Continue? (yes/no): ");
