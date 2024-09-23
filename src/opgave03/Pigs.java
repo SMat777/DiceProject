@@ -36,6 +36,7 @@ public class Pigs {
         }
 
         // Print final scores
+        System.out.println("");
         System.out.println("Final scores below");
         System.out.println("------------------");
         System.out.println("Player 1: " + player1Score);
