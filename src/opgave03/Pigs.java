@@ -24,7 +24,6 @@ public class Pigs {
                 playGame = false;
                 break;
             }
-
             // Player 2's turn
             player2Score = player2Turn(input, dice, player2Score);
             if (player2Score >= 30) {
@@ -34,7 +33,6 @@ public class Pigs {
                 break;
             }
         }
-
         // Print final scores
         System.out.println("");
         System.out.println("Final scores below");
